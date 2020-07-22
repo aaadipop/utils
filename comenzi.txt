@@ -9,4 +9,63 @@
          
 -~ - mergem in home
 
+GIT COMMANDS
+git init [repository name] —> to start a new repo
+git clone [url] —> to obtain a repo from an existing URL
+git add [file] —> to add a file to the staging
+git commit -m "[type in the commit message]" —> snapshot the file permanently in the version history
+git commit -a —> commits any files you've added with the git add command and also commits any files you've changed since then
+git diff —> shows the file differences which are not yet staged
+git diff -staged —> shows the differences between the files in the staging are and the latest version present
+git diff [first branch] [second branch] —> shows the differences between the two branches mentioned
+git status —> lists all the files that have to be committed
+git branch —> lists all the local branches in the current repo
+git branch [name] —> creates a new branch
+git branch -d [branch name] —> deletes the feature branch
+git checkout [branch name] —> switch from one branch to another
+git checkout -b [branch name] —> creates a new branch and switches to it
+git push [variable name] master —> sends the committed changes of master branch to your remote repo
+git pull [Repository Link] —> fetches and merges changes on the remote server to your working directory
+git fetch —> download objects and refs from another repo // imi spune ce s-a schimbat
+git reset [file] —> unstages the file, but it preserves the file contents
+git reset [commit] —> undoes all the commits after the specified commit and preserves the changes locally
+fit reset -hard [commit] —> discards all history and goes back to the specified commit
+git remote add [variable name] [Remote Server Link]—> connect your repo to the remote server
+git tag [commiID] —> gives tags to the specified commit
+git show [commit] —> shows the metadata and content changes of the specified commit
+git log —> list the version history for the current branch
+git rm [file] —> deletes the file from your working dir and stages the deletion
+-f —> force (trebuie folosit atunci cand facem update la commit) 
+SHH
+ssh-keygen -t ed25519 000|> creare cheve de ssh
+cat ~/.ssh/id_ed25519.pub —> afisam cheia publica
+https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account —> conexiune la git
+SSH-COPY-ID
+installs an SSH key on a server as an authorized key. Its purpose is to provision access without requiring a password for each login. This facilitates automated, passwordless logins and single sign-on using the SSH protocol.
+brew install ssh-copy-id
+/usr/local/opt/ssh-copy-id/bin/ssh-copy-id -i ~/.ssh/id_ed25519 imoo@ns2.iservit.ro —> copiaza cheia publica pentru user-ul imoo pe server-ul ns2
+ssh imoo@ns2.iservit.ro -i .ssh/id_ed25519 —> log ca imoo la server-ul ns2
+NEW CONFIG
+cd .shh
+vi config
+i ENTER
+paste la: 
+Host instep
+HostName 192.168.1.33
+User imoo
+IdentityFile ~/.ssh/id_ed25519
+IdentitiesOnly yes
+exc
+:wq
+
+sudo openvpn imorar.ovpn --->conexiune la vpn
+ssh -i .ssh/id_ed25519 root@192.168.1.33
+
+vi .bashrc ---> fisierul unde definim alias
+i ENTER
+alias sshi=‘ssh -o “UserKnownHostsFile=/dev/null” -o “StrictHostKeyChecking=no” -i ~/.ssh/id_ed25519’
+esc
+:wq
+
+sshi root@192.168.1.33 IN LOC DE ssh -i .ssh/id_ed25519 root@192.168.1.33
 
