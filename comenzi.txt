@@ -1,0 +1,12 @@
+
+--copiem de pe server
+   -auth 
+        ssh -i ~/.ssh/id_ed25519 ibuu@ns2.iservit.ro
+   -copiere
+         scp -i ~/.ssh/id_ed25519 ibuu@ns2.iservit.ro:ibuu.ovpn 
+    -cd sa mergi in home
+         sudo openvpn ibuu.ovpn(sau ibuda.ovpn)
+         
+-~ - mergem in home
+
+
