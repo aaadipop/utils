@@ -5,4 +5,7 @@ https://www.youtube.com/watch?v=cf7um16MZzs ---> atom code editor package
 
 MATERIAL UI
 https://material-ui.com/customization/theming/
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7f6595c9c4a05b1eaca68518ca8b7053dbe2e004
