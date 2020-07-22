@@ -37,7 +37,7 @@ git log —> list the version history for the current branch
 git rm [file] —> deletes the file from your working dir and stages the deletion
 -f —> force (trebuie folosit atunci cand facem update la commit) 
 SHH
-ssh-keygen -t ed25519 000|> creare cheve de ssh
+ssh-keygen -t ed25519 000|> creare cheie de ssh
 cat ~/.ssh/id_ed25519.pub —> afisam cheia publica
 https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account —> conexiune la git
 SSH-COPY-ID

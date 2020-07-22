@@ -6,4 +6,3 @@ https://www.youtube.com/watch?v=cf7um16MZzs ---> atom code editor package
 MATERIAL UI
 https://material-ui.com/customization/theming/
 
-git@github.com:aaadipop/utils.git
