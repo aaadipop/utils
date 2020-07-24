@@ -1,0 +1,28 @@
+Git basics:
+
+git clone [url]                 to obtain a repo from an existing URL
+git init [repository name]      to start a new repo
+git add [file]                  to add a file to the staging
+git commit -m "[message]"       snapshot the file permanently in the version history
+git commit -a                   commits any files you've added with the git add command and also commits any files you've changed since then
+git diff                        shows the file differences which are not yet staged
+git diff -staged                shows the differences between the files in the staging are and the latest version present
+git diff [branch1] [branch2]    shows the differences between the two branches mentioned
+git status                      lists all the files that have to be committed
+git branch                      lists all the local branches in the current repo
+git branch [name]               creates a new branch
+git branch -d [branch name]     deletes the feature branch
+git checkout [branch name]      switch from one branch to another
+git checkout -b [branch name]   creates a new branch and switches to it
+git push [variable name] master sends the committed changes of master branch to your remote repo
+git pull [Repository Link]      fetches and merges changes on the remote server to your working directory
+git fetch                       download objects and refs from another repo // imi spune ce s-a schimbat
+git reset [file]                unstages the file, but it preserves the file contents
+git reset [commit]              undoes all the commits after the specified commit and preserves the changes locally
+fit reset -hard [commit]        discards all history and goes back to the specified commit
+git remote add [variable name] [Remote Server Link]—> connect your repo to the remote server
+git tag [commiID]               gives tags to the specified commit
+git show [commit]               shows the metadata and content changes of the specified commit
+git log                         list the version history for the current branch
+git rm [file]                   deletes the file from your working dir and stages the deletion
+-f                              force (trebuie folosit atunci cand facem update la commit)

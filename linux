@@ -1,0 +1,47 @@
+Linux basic commands:
+
+1. ssh
+--------------------------------------------------------------------------------
+fisiere
+  location                      ~/.ssh/
+  private/public key            ~/.ssh/id_ed25519(.pub)
+  host-uri cunoscute            ~/.ssh/known_hosts
+  chei publice valide           ~/.ssh/authorized_keys
+  fisier config hosturi         ~/.ssh/config
+  fisier config                 /etc/ssh/sshd_config
+
+creeare cheie ssh               ssh-keygen -t ed25519
+afisam cheia publica            cat ~/.ssh/id_ed25519.pub
+
+specificarea unui host + cheie + user in fisierul .ssh/config
+  Host instapy
+  HostName 192.168.1.33
+  User root
+  IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+comenzi:
+  copiere cheie publica         ssh-copy-id -i ~/.ssh/id_ed25519 user@host
+  logare prin ssh               ssh -i ~/.ssh/id_ed25519 user@host
+  copiem de pe server           scp -i ~/.ssh/id_ed25519 user@host:/path/to/file /path/to/destination
+  conectare la un host definit  ssh instapy
+
+2. alias
+--------------------------------------------------------------------------------
+fisierul cu definitii alias     ~/.bashrc
+  alias sshi='ssh -o "UserKnownHostsFile=/dev/null" -o "StrictHostKeyChecking=no" -i ~/.ssh/id_ed25519'
+  alias scpi='scp -o "UserKnownHostsFile=/dev/null" -o "StrictHostKeyChecking=no" -i ~/.ssh/id_ed25519'
+
+3. diverse
+--------------------------------------------------------------------------------
+conectare ovpn                 sudo openvpn client.ovpn
+specificare ip:host            /etc/hosts
+editor text:
+  nano /path/to/file
+    pt. a salva: ctrl+X -> Y -> Enter
+  vi /path/to/file
+    I     insert mode
+    esc   control mode
+    :wq   write + quit

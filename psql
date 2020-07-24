@@ -1,0 +1,36 @@
+Psql basic commands:
+
+1. Queries
+--------------------------------------------------------------------------------
+
+
+2. DB ops
+--------------------------------------------------------------------------------
+connect:
+  psql -h db.host -d db_name -U db_usr
+
+create db + user:
+  CREATE USER db_usr WITH PASSWORD 'password';
+  CREATE DATABASE db_name;
+  GRANT ALL PRIVILEGES ON DATABASE db_name TO db_usr;
+
+change user pass:
+  ALTER USER db_user WITH PASSWORD 'new_password';
+
+commands:
+  /l - list all tables
+  /d - list all rows from a table
+  /c - change database in use
+
+dump:
+  pg_dump db_name -U db_usr | psql db_new_name -U db_usr;
+
+3. Server ops
+--------------------------------------------------------------------------------
+Install:
+  install         dnf install postgresql-server
+  init db         postgresql-setup --initdb --unit postgresql
+  listen *        vi /etc/postgresql-setup/upgrade/postgresql.conf
+  allow all conn  echo “host all all 0.0.0.0/0  md5” >> /var/lib/pgsql/data/pg_hba.conf
+  enable service  systemctl enable postgres
+  start service   systemctl start postgres
