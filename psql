@@ -34,3 +34,23 @@ Install:
   allow all conn  echo “host all all 0.0.0.0/0  md5” >> /var/lib/pgsql/data/pg_hba.conf
   enable service  systemctl enable postgres
   start service   systemctl start postgres
+  
+  
+  ----Comenzi baza de date
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

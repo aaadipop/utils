@@ -1,0 +1,23 @@
+--Comnenzi   database
+
+
+o - conectare
+
+
+  -psql -h db.pow -d snowpow_dev -U snowpow_devusr
+
+
+o - Trebuie openvpn deeschis
+
+
+  -sudo openvp ibuu.openvpn
+
+
+o - sa vezi procesele  de postgress
+
+  -ps aux | grep postgres
+
+
+o - verificare endpoint din terminal plus timpul de access
+
+    time curl http://localhost:8080/test
